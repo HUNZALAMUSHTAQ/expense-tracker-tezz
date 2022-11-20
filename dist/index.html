@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;1,500&family=Poppins:ital,wght@0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <section id="login" class="section-auth">
+        <div class="main-auth">
+            <div class="left-auth">
+                <div class="left-section">
+                    <h1 class="heading-left-text">SIGN IN</h1>
+                    <p class="para-left-text">LET's Sign Into your <br> accont</p>
+                </div>
+            </div>
+            <div class="right-auth">
+
+                <form id="login-form" class="div-auth">
+                    <div class="alert alert-warning" id="error-login" style="display: none;" role="alert">
+                        Error Message
+                       </div>
+                    <h1 class="auth-heading">Sign In</h1>
+                    <input type="email" id="login-email" class="form-control auth-input" placeholder="Email"
+                        aria-label="email" aria-describedby="basic-addon1" required>
+                    <input type="password" id="login-password" class="form-control auth-input" placeholder="Password"
+                        aria-label="password" aria-describedby="basic-addon1" required>
+
+                    <button class="button-auth" type="submit">SIGN IN</button>
+                    <p class="auth-link">Don't have an Account? <a href="#" id="switch-signup">Signup Here</a> </p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="signup" class="section-auth">
+        <div class="main-auth">
+            <div class="left-auth">
+                <div class="left-section">
+                    <h1 class="heading-left-text">SIGN UP</h1>
+                    <p class="para-left-text">Create your account, <br> enter details</p>
+                </div>
+            </div>
+            <div class="right-auth">
+
+                <form id="signup-form" class="div-auth">
+                    <div class="alert alert-warning" id="error-signup"  style="display: none;" role="alert">
+                       Error Message
+                      </div>
+                    <h1 class="auth-heading">Create Account</h1>
+                    <input type="name" id="signup-name" class="form-control auth-input" placeholder="Name"
+                        aria-label="name" aria-describedby="basic-addon1" required>
+                    <input type="email" id="signup-email" class="form-control auth-input" placeholder="Email"
+                        aria-label="email" aria-describedby="basic-addon1" required>
+                    <input type="password" id="signup-password" class="form-control auth-input" placeholder="Password"
+                        aria-label="password" aria-describedby="basic-addon1" required>
+
+                    <button class="button-auth" type="submit">SIGN UP</button>
+                    <p class="auth-link">Already have an account? <a href="#" id="switch-login">Signin Here</a> </p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="section-dashboard">
+        <div class="divider">
+            <div class="left-ui-dashboard">
+                <div class="form-dashboard">
+                    <div class="alert alert-warning" id="error-dashboard"  style="display: none;" role="alert">
+                        Error Message
+                       </div>
+                    <form id="add-transactions">
+                        <div class="upper-transaction">
+                            <h4 style="font-weight:600">Add Transctions</h4>
+
+                            <div class="input-group add-trans-custom">
+                                <input type="number" class="form-control" id="transaction-amount"
+                                    style="width: 40% ;height: 4rem;" aria-label="Text input with dropdown button">
+                                <select class="custom-select" style="width: 30%;border-left: 0; height: 4rem;"
+                                    id="transaction-account-select">
+                                    <!-- <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option> -->
+                                </select>
+                                <fieldset id="transaction-type" style="
+                                  width: 30%;
+                                  text-align: center;">
+                                    <input type="radio" value="value1" name="group1">
+                                    <input type="radio" value="value2" name="group1">
+                                </fieldset>
+                            </div>
+
+                        </div>
+                        <div class="lower-transaction">
+                            <h6 style="font-weight:600; padding-top:1rem; ">Select Category</h6>
+                            <fieldset id="category" class="lower-form-radio">
+                                <div class="checkboxgroup">
+                                    <label for="home">home</label>
+                                    <input type="radio" name="radio" class="radio" id="shopping" />
+                                </div>
+                                <div class="checkboxgroup">
+                                    <label for="shopping">Shopping</label>
+                                    <input type="radio" name="radio" class="radio" id="shopping" />
+                                </div>
+                                <div class="checkboxgroup">
+                                    <label for="gifts">Gifts</label>
+                                    <input type="radio" name="radio" class="radio" id="gifts" />
+                                </div>
+                                <div class="checkboxgroup">
+                                    <label for="mobile">Mobile</label>
+                                    <input type="radio" name="radio" class="radio" id="mobile" />
+                                </div>
+                                <div class="checkboxgroup">
+                                    <label for="family">Family</label>
+                                    <input type="radio" name="radio" class="radio" id="family" />
+                                </div>
+                                <!-- <div class="checkboxgroup">
+                                    <label for="gifts">A</label>
+                                    <input type="radio" name="radio" class="radio" id="gifts" />
+                                  </div> -->
+                            </fieldset>
+                        </div>
+                        <input type="submit" value="Add" id="transaction-add-submit">
+                    </form>
+                </div>
+                <div class="transaction-history">
+                    <h3>Transactions History</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                            <div id="list-category" style="font-weight:400;">Shooping</div>
+                            <div id="list-account">Meezan Bank</div>
+                            <div id="list-date">Date</div>
+                            <div id="list-amount">Rs - 15000 PKr</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-ui-dashboard">
+                <div class="ui-info">
+                    <button type="button" class="btn btn-danger" id="user-logout" style="margin-bottom: 1rem;">Logout</button>
+                    <h6 style="font-weight: 600;">What You Have</h6>
+                    <h2  style="font-weight: 800; color:rgb(89 132 180);" id="transaction-amount-disp">PKR 2000</h2>
+                    <div class="type-display">
+                        <div class="cash">
+                            <p>Cash</p>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-cash">10000</h6>
+                        </div>
+                        <div class="Bank">
+                            <p>Bank</p>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-bank">10000</h6>
+                        </div>
+                        <div class="cash">
+                            <p>Saving</p>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-cash">0</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="accounts" >
+                    <div class="all-account-divider">
+                        <h6>All Acount</h6>
+                        <a href="#" id="add-more-accounts">add more+</a>
+                    </div>
+                    <div style="overflow-y: scroll ;height: 8rem;">
+                        <ul class="list-group" id="all-accounts">
+                            <!-- <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                                <div id="list-account-type">Cash</div>
+                                <div id="list-amount">5000 PKr</div>
+                            </li>
+                            <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                                <div id="list-account-type">Savings</div>
+                                <div id="list-amount">0 PKr</div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="charts">
+                    Overview
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="bundle.js" ></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

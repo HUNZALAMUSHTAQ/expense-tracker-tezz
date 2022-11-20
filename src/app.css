@@ -1,0 +1,254 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 0;
+    margin: 0;
+}
+
+.section-auth {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(89 132 180);
+    height: 100%;
+    width: 100%;
+}
+
+.right-auth {
+    background-color: white;
+    display: flex;
+    width: 60%;
+    border-radius: 3rem 0 0 3rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-auth {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(89 132 180);
+}
+
+.div-auth {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.heading-left-text {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    margin-bottom: 0;
+
+}
+
+.para-left-text {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 0;
+}
+
+.auth-heading {
+    font-weight: 900;
+    color: #5984b4;
+    margin-bottom: 3rem;
+}
+
+.auth-input {
+    width: 70%;
+    margin-bottom: 2rem;
+}
+
+.button-auth {
+    background-color: rgb(89 132 180);
+    border: none;
+    color: white;
+    padding: 15px 57px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-link {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .left-auth {
+        display: none;
+    }
+
+    .right-auth {
+        border-radius: 3rem 3rem 3rem 3rem;
+        width: 100%;
+    }
+}
+
+.section-dashboard {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-ui-dashboard {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+
+}
+
+.right-ui-dashboard {
+    width: 30%;
+    padding: 3rem;
+    background-color: rgb(239 239 239);
+}
+
+#add-transaction {
+    display: flex;
+    flex-direction: column;
+}
+
+#transaction-add-submit {
+    width: 10rem;
+    height: 4rem;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: rgb(89 132 180);
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+#transaction-add-submit:hover {
+    background-color: rgb(89 132 180);
+    box-shadow: 0px 15px 20px rgba(89, 131, 180, 0.304);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.add-trans-custom {
+    align-items: center;
+}
+
+:focus {
+    outline: none;
+}
+
+.radio {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border: 4px solid #ccc;
+    border-top-color: #bbb;
+    border-left-color: #bbb;
+    background: rgb(60, 59, 59);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.radio:checked {
+    border: 20px solid  rgb(89 132 180) ;
+}
+.checkboxgroup {
+    display: inline-block;
+    text-align: center;
+  }
+  .checkboxgroup label {
+    display: block;
+  }
+.lower-form-radio{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+}
+
+/* .left-dashboard {} */
+
+.form-dashboard {
+    height: 50%;
+    margin-bottom: 2rem;
+}
+
+/* .upper-transaction {} */
+
+.lower-transaction {
+    padding-bottom: 1rem;
+
+}
+
+.transaction-history {
+    height: 50%;
+    padding-top: 1rem;
+    overflow: scroll;
+}
+.type-display{
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 2.5rem; 
+}
+.all-account-divider{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.accounts{
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+}
+.ui-info {
+    height: 30%;
+}
+
+.accounts {
+    height: 30%;
+}
+
+/* .type-display {} */
+
+.charts {
+    height: 40%;
+
+}
+
+.divider {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
