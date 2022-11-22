@@ -30,7 +30,7 @@
                 <form id="login-form" class="div-auth">
                     <div class="alert alert-warning" id="error-login" style="display: none;" role="alert">
                         Error Message
-                       </div>
+                    </div>
                     <h1 class="auth-heading">Sign In</h1>
                     <input type="email" id="login-email" class="form-control auth-input" placeholder="Email"
                         aria-label="email" aria-describedby="basic-addon1" required>
@@ -57,9 +57,9 @@
             <div class="right-auth">
 
                 <form id="signup-form" class="div-auth">
-                    <div class="alert alert-warning" id="error-signup"  style="display: none;" role="alert">
-                       Error Message
-                      </div>
+                    <div class="alert alert-warning" id="error-signup" style="display: none;" role="alert">
+                        Error Message
+                    </div>
                     <h1 class="auth-heading">Create Account</h1>
                     <input type="name" id="signup-name" class="form-control auth-input" placeholder="Name"
                         aria-label="name" aria-describedby="basic-addon1" required>
@@ -77,18 +77,52 @@
     </section>
 
     <section id="dashboard" class="section-dashboard">
+
+        <!-- Modal -->
+        <div class="modal fade" id="add-account-modal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Your Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-account">
+                            <div class="form-group">
+                                <label for="modal-account-name" class="col-form-label">Add an Account:</label>
+                                <input type="text" required class="form-control" id="modal-account-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="modal-account-amount" class="col-form-label">PKR?</label>
+                                <input type="number" required class="form-control" id="modal-account-amount">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="modal-close-button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Account</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal End-->
         <div class="divider">
             <div class="left-ui-dashboard">
                 <div class="form-dashboard">
-                    <div class="alert alert-warning" id="error-dashboard"  style="display: none;" role="alert">
+                    <div class="alert alert-warning" id="error-dashboard" style="display: none;" role="alert">
                         Error Message
-                       </div>
+                    </div>
                     <form id="add-transactions">
                         <div class="upper-transaction">
-                            <h4 style="font-weight:600">Add Transctions</h4>
+                            <h4 style="font-weight:600">Add Transactions</h4>
 
                             <div class="input-group add-trans-custom">
-                                <input type="number" class="form-control" id="transaction-amount"
+                                <input required type="number" class="form-control" id="transaction-amount"
                                     style="width: 40% ;height: 4rem;" aria-label="Text input with dropdown button">
                                 <select class="custom-select" style="width: 30%;border-left: 0; height: 4rem;"
                                     id="transaction-account-select">
@@ -96,12 +130,21 @@
                                     <option value="2">Two</option>
                                     <option value="3">Three</option> -->
                                 </select>
-                                <fieldset id="transaction-type" style="
-                                  width: 30%;
-                                  text-align: center;">
-                                    <input type="radio" value="value1" name="group1">
-                                    <input type="radio" value="value2" name="group1">
-                                </fieldset>
+                                
+                                    <fieldset id="transaction-type"
+                                        style="width: 30%;text-align: center;display: flex;align-items: center;justify-content: space-around;">
+                                        <div class="checkboxgroup2">
+                                            <label for="expense">Expense</label>
+                                            <input type="radio" required name="transaction-type" value="expense" class="radio2" id="expense" />
+                                        </div>
+                                        <div class="checkboxgroup2">
+                                            <label for="income">Income</label>
+                                            <input type="radio" name="transaction-type" value="income" class="radio2" id="income" />
+                                        </div>
+                                        <!-- <input type="radio"  class="radio2" value="expense" name="expense">
+                                    <input type="radio" class="radio2" value="income" name="income"> -->
+                                    </fieldset>
+                    
                             </div>
 
                         </div>
@@ -110,23 +153,23 @@
                             <fieldset id="category" class="lower-form-radio">
                                 <div class="checkboxgroup">
                                     <label for="home">home</label>
-                                    <input type="radio" name="radio" class="radio" id="shopping" />
+                                    <input required type="radio" name="category" value="Home" class="radio" id="home" />
                                 </div>
                                 <div class="checkboxgroup">
                                     <label for="shopping">Shopping</label>
-                                    <input type="radio" name="radio" class="radio" id="shopping" />
+                                    <input type="radio" name="category" class="radio" value="Shopping" id="shopping" />
                                 </div>
                                 <div class="checkboxgroup">
                                     <label for="gifts">Gifts</label>
-                                    <input type="radio" name="radio" class="radio" id="gifts" />
+                                    <input type="radio" name="category" class="radio" value="Gifts" id="gifts" />
                                 </div>
                                 <div class="checkboxgroup">
                                     <label for="mobile">Mobile</label>
-                                    <input type="radio" name="radio" class="radio" id="mobile" />
+                                    <input type="radio" name="category" class="radio" value="Mobile" id="mobile" />
                                 </div>
                                 <div class="checkboxgroup">
                                     <label for="family">Family</label>
-                                    <input type="radio" name="radio" class="radio" id="family" />
+                                    <input type="radio" name="category" class="radio" value="Family" id="family" />
                                 </div>
                                 <!-- <div class="checkboxgroup">
                                     <label for="gifts">A</label>
@@ -134,13 +177,14 @@
                                   </div> -->
                             </fieldset>
                         </div>
-                        <input type="submit" value="Add" id="transaction-add-submit">
+                        <input   type="submit" value="Add" id="transaction-add-submit">
                     </form>
                 </div>
+                <h3>Transactions History</h3>
+
                 <div class="transaction-history">
-                    <h3>Transactions History</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item" style="display: flex;justify-content: space-between;">
+                    <ul class="list-group" id="all-transactions">
+                        <!-- <li class="list-group-item" style="display: flex;justify-content: space-between;">
                             <div id="list-category" style="font-weight:400;">Shooping</div>
                             <div id="list-account">Meezan Bank</div>
                             <div id="list-date">Date</div>
@@ -181,34 +225,40 @@
                             <div id="list-account">Meezan Bank</div>
                             <div id="list-date">Date</div>
                             <div id="list-amount">Rs - 15000 PKr</div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
             <div class="right-ui-dashboard">
                 <div class="ui-info">
-                    <button type="button" class="btn btn-danger" id="user-logout" style="margin-bottom: 1rem;">Logout</button>
+                    <h5>Welcome !  <span class="badge badge-info" id="dashboard-email">  </span></h5>
+                    <button type="button" class="btn btn-danger" id="user-logout"
+                        style="margin-bottom: 1rem;">Logout</button>
                     <h6 style="font-weight: 600;">What You Have</h6>
-                    <h2  style="font-weight: 800; color:rgb(89 132 180);" id="transaction-amount-disp">PKR 2000</h2>
+                    <h2 style="font-weight: 800; color:rgb(89 132 180);" id="transaction-amount-disp">PKR 0</h2>
                     <div class="type-display">
                         <div class="cash">
                             <p>Cash</p>
-                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-cash">10000</h6>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-cash">
+                                0</h6>
                         </div>
                         <div class="Bank">
                             <p>Bank</p>
-                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-bank">10000</h6>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-bank">
+                                0</h6>
                         </div>
                         <div class="cash">
-                            <p>Saving</p>
-                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-cash">0</h6>
+                            <p>Expenses </p>
+                            <h6 style="font-size: 18px;font-weight: 600;color:rgb(89 132 180);" id="dashboard-expenses">0
+                            </h6>
                         </div>
                     </div>
                 </div>
-                <div class="accounts" >
+                <div class="accounts">
                     <div class="all-account-divider">
                         <h6>All Acount</h6>
-                        <a href="#" id="add-more-accounts">add more+</a>
+                        <a href="#" id="add-more-accounts" data-toggle="modal" data-target="#add-account-modal">add
+                            more+</a>
                     </div>
                     <div style="overflow-y: scroll ;height: 8rem;">
                         <ul class="list-group" id="all-accounts">
@@ -225,13 +275,14 @@
                 </div>
                 <div class="charts">
                     Overview
-
+                    <div id="chartContainer" style="height: 80%; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="bundle.js" ></script>
+    <script src="bundle.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
